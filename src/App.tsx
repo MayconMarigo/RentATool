@@ -1,19 +1,30 @@
-import './App.css';
-import reactLogo from './assets/react.svg';
+import { Grid } from "@mui/material";
+import "./App.css";
+import Logo from "./assets/rent-tools.png";
+import LoginContainer from "./components/LoginContainer/LoginContainer";
 
 function App() {
-
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Welcome to Rent a Tool</h1>
-
-    </>
-  )
+    <Grid
+      container
+      direction="column"
+      minHeight={"100vh"}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      py={10}
+    >
+      <div
+        style={{
+          backgroundImage: `url(${Logo})`,
+          backgroundSize: "100%",
+          backgroundRepeat: "no-repeat",
+          width: 300,
+          height: 200
+        }}
+      />
+      <LoginContainer />
+    </Grid>
+  );
 }
 
-export default App
+export default App;
