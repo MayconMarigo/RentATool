@@ -1,11 +1,11 @@
 import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import ToolContainer from "../../components/ToolContainer/ToolContainer";
-import { useEffect, useState } from "react";
 import { calcHeight } from "../../utils/utils";
 
-interface ITools {
+export interface ITools {
   img: string;
   id: number;
 }
@@ -23,14 +23,9 @@ export default function Home() {
     <>
       <Header height={80} />
       {height > 0 && (
-        <Grid
-          container
-          direction="column"
-          p={10}
-          height={height}
-        >
+        <Grid container direction="column" p={10} height={height}>
           {toolsArray?.map((tool: ITools) => (
-            <ToolContainer key={tool.id} tool={tool} />
+            <ToolContainer key={tool.id} content={tool} />
           ))}
         </Grid>
       )}
