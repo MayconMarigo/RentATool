@@ -13,13 +13,13 @@ function App() {
       alignItems={"center"}
       py={10}
     >
-      <div
-        style={{
+      <Grid
+        sx={{
           backgroundImage: `url(${Logo})`,
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
-          width: 300,
-          height: 200
+          width: { xs: 200, sm: 300 },
+          height: 200,
         }}
       />
       <LoginContainer />
