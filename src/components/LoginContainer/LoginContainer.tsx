@@ -1,6 +1,7 @@
 import { Grid, TextField, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-1;
+import { COLORS } from "../../theme/Theme.js";
+
 const LoginContainer = () => {
   const [size, setSize] = useState(`800px`);
 
@@ -27,12 +28,12 @@ const LoginContainer = () => {
           fontWeight: 700,
           borderRadius: 2,
           padding: "10px 25px",
-          backgroundColor: "#F96915",
+          backgroundColor: COLORS.main,
           border: "2px solid #fff",
           color: "#fff",
           "&:hover": {
             backgroundColor: "#fff",
-            color: "#F96915",
+            color: COLORS.main,
             border: "2px solid black",
           },
         }}
