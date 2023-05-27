@@ -28,7 +28,6 @@ export default function Home() {
           direction="column"
           p={10}
           height={height}
-          sx={{ backgroundColor: "red" }}
         >
           {toolsArray?.map((tool: ITools) => (
             <ToolContainer key={tool.id} tool={tool} />
