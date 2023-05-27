@@ -6,7 +6,9 @@ interface IToolContainer {
 }
 
 const ToolContainer: React.FC<IToolContainer> = ({ content }) => {
-  return <div>ToolContainer</div>;
+
+  console.log(content)
+  return (<div>ToolContainer</div>);
 };
 
 export default ToolContainer;
