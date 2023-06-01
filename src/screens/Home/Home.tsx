@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <Header height={80} />
+      <Header height={80} renderImage/>
       {height > 0 && (
         <Grid container direction="column" p={10} height={height}>
           <Grid container flex={1} gap={{xs: 5, sm: 15}} justifyContent="center">

@@ -6,9 +6,10 @@ import React, { ReactElement } from "react";
 interface IFooter {
   renderContent?: boolean;
   children?: ReactElement;
+  rest?: object
 }
 
-const Footer: React.FC<IFooter> = ({ renderContent, children }) => {
+const Footer: React.FC<IFooter> = ({ renderContent, children, rest }) => {
   return (
     <Grid
       container
@@ -17,6 +18,7 @@ const Footer: React.FC<IFooter> = ({ renderContent, children }) => {
       sx={{
         backgroundColor: COLORS.footer,
         height: 50,
+        ...rest
       }}
     >
       {renderContent && children}
