@@ -7,6 +7,10 @@ import Home from "./screens/Home/Home.tsx";
 
 export const router = createBrowserRouter([
   {
+    path: "*",
+    element: <Login />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
