@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
-import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import ToolContainer from "../../components/ToolContainer/ToolContainer";
 import { calcHeight } from "../../utils/utils";
