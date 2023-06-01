@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import ToolContainer from "../../components/ToolContainer/ToolContainer";
 import { calcHeight } from "../../utils/utils";
+import { toolsArray } from "./ToolsArray";
 
 export interface ITools {
   img: string;
@@ -11,12 +12,10 @@ export interface ITools {
 }
 
 export default function Home() {
-  const toolsArray: ITools[] = [{ id: 0, img: "https://google.com.br/" }];
-
   const [height, setHeight] = useState<number>(0);
 
   useEffect(() => {
-    setHeight(calcHeight(["header", "footer"]));
+    setHeight(calcHeight(["header"]));
   }, []);
 
   return (
@@ -24,13 +23,13 @@ export default function Home() {
       <Header height={80} />
       {height > 0 && (
         <Grid container direction="column" p={10} height={height}>
-          {toolsArray?.map((tool: ITools) => (
-            <ToolContainer key={tool.id} content={tool} />
-          ))}
+          <Grid container flex={1} gap={{xs: 5, sm: 15}} justifyContent="center">
+            {toolsArray?.map((tool: ITools) => (
+              <ToolContainer key={tool.id} content={tool} />
+            ))}
+          </Grid>
         </Grid>
       )}
-
-      <Footer />
     </>
   );
 }

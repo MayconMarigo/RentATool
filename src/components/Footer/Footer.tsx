@@ -17,8 +17,6 @@ const Footer: React.FC<IFooter> = ({ renderContent, children }) => {
       sx={{
         backgroundColor: COLORS.footer,
         height: 50,
-        position: "absolute",
-        bottom: 0,
       }}
     >
       {renderContent && children}

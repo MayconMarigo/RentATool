@@ -17,13 +17,13 @@ const LogoImage: React.FC<ILogoImage> = ({ height, logoHeight }) => {
 
   return (
     <Grid
-      component="img"
+      component="svg"
       sx={{
         backgroundImage: `url(${Logo})`,
         backgroundSize: "100%",
         backgroundRepeat: "no-repeat",
         width: { xs: xs , sm: sm },
-        height: height || 50,
+        height: height || 80,
       }}
     />
   );
